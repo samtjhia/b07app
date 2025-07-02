@@ -69,10 +69,9 @@ public class SituationFragment extends Fragment {
     }
     private void addAnswer() {
         db = FirebaseDatabase.getInstance("link");
-        itemsRef = db.getReference("questionaire/warm-up");
-        String []choices = {"Still in a relationship","Planning to leave","Post-separation"};
+        itemsRef = db.getReference("questionaire/warm-up");// not sure how the database is set up
         String id = itemsRef.push().getKey();
-        Question question1 = new Question(question,choices);
+        Question question1 = new Question(question,choice);
 
         itemsRef.child(id).setValue(question1).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {

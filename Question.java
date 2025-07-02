@@ -2,17 +2,15 @@ package com.example.b07demosummer2024;
 
 public class Question {
     private String question;
-    private String choices [];
+    private String choice;
 
-    public Question(String question, String[] choices) {
+    public Question(String question, String choice) {
         this.question = question;
-        this.choices = choices;
+        this.choice = choice;
     }
 
 
-    public void setChoices(String [] choices){
-        this.choices = choices;
-    }
+
 
 
 
